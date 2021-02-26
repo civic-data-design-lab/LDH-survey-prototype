@@ -1,0 +1,41 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+p {
+    font-size: 0.8em;
+}
+.fs-smaller {
+    font-size: 0.6em;
+}
+a, a:visited {
+    text-decoration: none;
+    color: #3B829A;
+}
+a:hover {
+    text-decoration: underline;
+    color: #2C6273;
+}
+
+.btn-primary, .btn-primary:visited {
+    background-color: #F1B71C;
+    border-color: #F1B71C;
+}
+.btn-primary:hover {
+    background-color: #F7D477;
+    border-color: #F7D477;
+}
+.btn-success {
+    background-color: #B58915;
+    border-color: #B58915;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
