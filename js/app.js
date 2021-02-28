@@ -16,6 +16,7 @@ function checkUserEmail(){
 
 // xxxxxxxxxx Check email or password exist in firebase authentication xxxxxxxxxx    
 function signIn(){
+    console.log("dre")
     var userEmail = document.getElementById("inputEmail").value;
     var userPassword = document.getElementById("inputPassword").value;
     var userEmailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
