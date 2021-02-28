@@ -30,6 +30,7 @@ function signIn(){
     //     return checkUserSIPassword();
     }else{
         firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then((success) => {
+            console.log(1, "success")
             swal({
                 type: 'successful',
                 title: 'Succesfully signed in', 
