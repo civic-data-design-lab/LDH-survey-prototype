@@ -16,7 +16,6 @@ function checkUserEmail(){
 
 // xxxxxxxxxx Check email or password exist in firebase authentication xxxxxxxxxx    
 function signIn(){
-    console.log("dre")
     var userEmail = document.getElementById("inputEmail").value;
     var userPassword = document.getElementById("inputPassword").value;
     var userEmailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -30,25 +29,23 @@ function signIn(){
     // }else if(checkUserPasswordValid == null){
     //     return checkUserSIPassword();
     }else{
-        firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then((success) => {
-            console.log(1, "success")
-            swal({
-                type: 'successful',
-                title: 'Succesfully signed in', 
-            }).then((value) => {
-                setTimeout(function(){
-                    window.location.replace("https://google.com");
-                }, 1000)
-            });
-        }).catch((error) => {
+        firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then((data) => {
+            const idToken = firebase.auth().currentUser.getIdToken()
+            return idToken
+        })
+        .then((token) => {
+            return 
+        })
+        .then((value) => {
+            setTimeout(function(){
+                window.location.replace("./html/survey.html");
+            }, 1000)
+        })
+        .catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            swal({
-                type: 'error',
-                title: 'Error',
-                text: "Error",
-            })
+            console.log(errorCode, errorMessage)
         });
     }
 }
