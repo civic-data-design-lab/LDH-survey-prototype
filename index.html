@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="./css/signin.css">
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <link rel="script" href="./js/app.js">
 </head>
   
 <body class="text-center">
@@ -27,17 +29,41 @@
             <p class="mb-3 fw-bold">Log in to access the KPSPIN Network</p>
             <label for="inputEmail" class="visually-hidden">Email address</label>
             <input type="email" id="inputEmail" class="form-control fst-italic mb-3" placeholder="Email address" required autofocus>
+            <small id="emailError" class="form-text text-danger">Please check your login information.</small>
             <label for="inputPassword" class="visually-hidden">Password</label>
             <input type="password" id="inputPassword" class="form-control fst-italic mb-3" placeholder="Password" required>
-            <!-- <div class="checkbox mb-3">
+
+            <!-- <label for="inputPassword" class="visually-hidden">Password</label>
+            <input type="password" id="inputPassword" class="form-control fst-italic" placeholder="Password" required>
+            <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
             </div> -->
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="signIn()">Log in</button>
             <p class="mt-5 mb-3 text-muted fs-smaller"><em>By connecting to this Wi-Fi network, you are agreeing to our <a href="#">Terms of Service</a>.</em></p>
             <p class="mt-3 mb-3 text-muted fst-italic">&copy; KPSP Information Network</p>
         </form>
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+
+    <script>
+       var firebaseConfig = {
+    apiKey: "AIzaSyBoYXnCZtsH9fzE8elPZgo5g9LksQ-Z-gc",
+    authDomain: "daraja-test-edf30.firebaseapp.com",
+    projectId: "daraja-test-edf30",
+    storageBucket: "daraja-test-edf30.appspot.com",
+    messagingSenderId: "116745284882",
+    appId: "1:116745284882:web:34ce1506c75c0179a957cb"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script>
+
+
 </body>
 </html>
