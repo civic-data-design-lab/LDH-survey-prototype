@@ -118,3 +118,4 @@ window.onclick = function (event) {
 
 function continueQuestions() {
     window.location.href = "./questions.html";
+}
