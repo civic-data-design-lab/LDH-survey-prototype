@@ -20,6 +20,12 @@ a:hover {
     text-decoration: underline;
     color: #2C6273;
 }
+.text-left {
+    text-align: left!important;
+}
+.text-right {
+    text-align: right!important;
+}
 
 .btn-primary, .btn-primary:visited {
     background-color: #F1B71C;
