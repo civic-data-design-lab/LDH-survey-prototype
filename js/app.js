@@ -1,3 +1,4 @@
+// add sweet alert
 function checkUserEmail(){
     var userEmail = document.getElementById("inputEmail");
     var userEmailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -38,7 +39,7 @@ function signIn(){
         })
         .then((value) => {
             setTimeout(function(){
-                window.location.replace("./html/survey.html");
+                window.location.replace("./welcome.html");
             }, 1000)
         })
         .catch((error) => {
@@ -78,7 +79,7 @@ function signUp(){
         })
         .then((value) => {
             setTimeout(function(){
-                window.location.replace("./index.html");
+                window.location.replace("./welcome.html");
             }, 1000)
         })
         .catch((error) => {
