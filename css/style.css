@@ -6,8 +6,9 @@
     user-select: none;
 }
 
-p {
+p, label, .form-control-sm {
     font-size: 0.8em;
+    line-height: 1.2em;
 }
 .fs-smaller {
     font-size: 0.6em;
@@ -64,6 +65,28 @@ a:hover {
 }
 #modal-voluntary {
     background-color: rgba(0,0,0,0,5);
+}
+
+.form-survey {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px 30px;
+    margin: auto;
+}
+.form-blue {
+    background-color: #EAF3FA;
+    border: solid 1px #6c757d;
+    padding: 1rem;
+}
+.form-survey .form-check-input {
+    margin-left: 1rem;
+}
+.form-survey .form-check-label {
+    width: calc(100% - 2.5rem);
+}
+.form-survey .form-control-sm {
+    margin-left: 2.25rem;
+    width: calc(100% - 2.25rem)
 }
 
 @media (min-width: 768px) {
