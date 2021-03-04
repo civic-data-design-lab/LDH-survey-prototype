@@ -21,3 +21,7 @@ window.onclick = function (event) {
 function continueQuestions() {
     window.location.href = "./questions.html";
 }
+
+function backToWelcome() {
+    window.location.href = "./welcome.html";
+}
