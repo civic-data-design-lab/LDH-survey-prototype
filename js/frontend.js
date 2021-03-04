@@ -40,6 +40,10 @@ function backToWelcome() {
     window.location.href = "./welcome.html";
 }
 
+function toThankYou() {
+    window.location.href = "./thank-you.html";
+}
+
 // function jumpToQuestion(responseId, questionId) {
 //     document.getElementById(responseId).onclick = function() {
 //         document.getElementById(questionId).focus();
