@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="./css/signin.css">
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="./js/frontend.js"></script>
@@ -32,247 +34,248 @@
                 <p class="mb-4 text-center text-muted"><em>Community Perception</em></p>
             </div>
             
-            <div class="form-group" id="q1"><!-- Q1 -->
-                <p class="mt-3 mb-1">Have you heard about the Nairobi Metropolitan Services (NMS) plans to upgrade roads in Kibera?</p>
-                <input class="form-check-input" type="radio" name="nmsPlans" id="nmsYes" value="nmsYes">
-                <label class="form-check-label" for="nmsYes">
-                    Yes
-                </label><br>
-                <input class="form-check-input" type="radio" name="nmsPlans" id="nmsNo" value="nmsNo">
-                <label class="form-check-label" for="nmsNo">
-                    No
-                </label><br>
-                <input class="form-check-input" type="radio" name="nmsPlans" id="nmsNotSure" value="nmsNotSure">
-                <label class="form-check-label" for="nmsNotSure">
-                    Not Sure
-                </label>
-            </div>
+            <div class="form-questions">
+                <div class="form-group" id="q1"><!-- Q1 -->
+                    <p class="mt-3 mb-1">Have you heard about the Nairobi Metropolitan Services (NMS) plans to upgrade roads in Kibera?</p>
+                    <input class="form-check-input" type="radio" name="nmsPlans" id="nmsPlansYes" value="nmsPlansYes">
+                    <label class="form-check-label" for="nmsPlansYes">
+                        Yes
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="nmsPlans" id="nmsPlansNo" value="nmsPlansNo">
+                    <label class="form-check-label" for="nmsPlansNo">
+                        No
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="nmsPlans" id="nmsNotSure" value="nmsNotSure">
+                    <label class="form-check-label" for="nmsNotSure">
+                        Not Sure
+                    </label>
+                </div>
 
-            <div class="form-group" id="q1.1"><!-- Q1.1 -->
-                <p class="mt-3 mb-1">If yes, do you know where roads are supposed to be built?</p>
-                <input class="form-check-input" type="checkbox" name="whereRoads" value="sarangombe" id="sarangombe">
-                <label class="form-check-label" for="sarangombe">
-                    Sarang'ombe ward
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="whereRoads" value="gatwekera" id="gatwekera">
-                <label class="form-check-label" for="gatwekera">
-                    Gatwekera
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="whereRoads" value="sowetoWest" id="sowetoWest">
-                <label class="form-check-label" for="sowetoWest">
-                    Soweto West
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="whereRoads" value="kisumuNdogo" id="kisumuNdogo">
-                <label class="form-check-label" for="kisumuNdogo">
-                    Kisumu Ndogo
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="whereRoads" value="all" id="all">
-                <label class="form-check-label" for="all">
-                    All villages
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="whereRoads" value="other" id="other">
-                <label class="form-check-label" for="other">
-                    Other
-                </label><br>
-                <input type="text" class="form-control form-control-sm" id="otherSpecify" aria-describedby="otherSpecify" placeholder="Please specify">
-            </div>
-            
-            <div class="form-group" id="q1.2"><!-- Q1.2 -->
-                <p class="mt-3 mb-1">How did you find out about the road developments?</p>
-                <input class="form-check-input" type="radio" name="howPlans" id="friends" value="friends">
-                <label class="form-check-label" for="friends">
-                    Friends
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="neighbors" value="neighbors">
-                <label class="form-check-label" for="neighbors">
-                    Neighbors
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="family" value="family">
-                <label class="form-check-label" for="family">
-                    Family
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="newspaper" value="newspaper">
-                <label class="form-check-label" for="newspaper">
-                    Newspaper
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="tv" value="tv">
-                <label class="form-check-label" for="tv">
-                    TV
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="facebook" value="facebook">
-                <label class="form-check-label" for="facebook">
-                    Facebook
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="whatsapp" value="whatsapp">
-                <label class="form-check-label" for="whatsapp">
-                    WhatsApp
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="chief" value="chief">
-                <label class="form-check-label" for="chief">
-                    Chief
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="structuresMarked" value="structuresMarked">
-                <label class="form-check-label" for="structuresMarked">
-                    Structures marked for demolition
-                </label><br>
-                <input class="form-check-input" type="radio" name="howPlans" id="govt" value="govt">
-                <label class="form-check-label" for="govt">
-                    Government notification
-                </label>
-            </div>
+                <div class="form-group" id="q1-1"><!-- Q1.1 -->
+                    <p class="mt-3 mb-1">If yes, do you know where roads are supposed to be built?</p>
+                    <input class="form-check-input" type="checkbox" name="whereRoads" value="sarangombe" id="sarangombe">
+                    <label class="form-check-label" for="sarangombe">
+                        Sarang'ombe ward
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="whereRoads" value="gatwekera" id="gatwekera">
+                    <label class="form-check-label" for="gatwekera">
+                        Gatwekera
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="whereRoads" value="sowetoWest" id="sowetoWest">
+                    <label class="form-check-label" for="sowetoWest">
+                        Soweto West
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="whereRoads" value="kisumuNdogo" id="kisumuNdogo">
+                    <label class="form-check-label" for="kisumuNdogo">
+                        Kisumu Ndogo
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="whereRoads" value="all" id="all">
+                    <label class="form-check-label" for="all">
+                        All villages
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="whereRoads" value="other" id="other">
+                    <label class="form-check-label" for="other">
+                        Other
+                    </label><br>
+                    <input type="text" class="form-control form-control-sm" id="otherSpecify" aria-describedby="otherSpecify" placeholder="Please specify">
+                </div>
+                
+                <div class="form-group" id="q1-2"><!-- Q1.2 -->
+                    <p class="mt-3 mb-1">How did you find out about the road developments?</p>
+                    <input class="form-check-input" type="radio" name="howPlans" id="friends" value="friends">
+                    <label class="form-check-label" for="friends">
+                        Friends
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="neighbors" value="neighbors">
+                    <label class="form-check-label" for="neighbors">
+                        Neighbors
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="family" value="family">
+                    <label class="form-check-label" for="family">
+                        Family
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="newspaper" value="newspaper">
+                    <label class="form-check-label" for="newspaper">
+                        Newspaper
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="tv" value="tv">
+                    <label class="form-check-label" for="tv">
+                        TV
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="facebook" value="facebook">
+                    <label class="form-check-label" for="facebook">
+                        Facebook
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="whatsapp" value="whatsapp">
+                    <label class="form-check-label" for="whatsapp">
+                        WhatsApp
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="chief" value="chief">
+                    <label class="form-check-label" for="chief">
+                        Chief
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="structuresMarked" value="structuresMarked">
+                    <label class="form-check-label" for="structuresMarked">
+                        Structures marked for demolition
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="howPlans" id="govt" value="govt">
+                    <label class="form-check-label" for="govt">
+                        Government notification
+                    </label>
+                </div>
 
-            <div class="form-group" id="q1.3"><!-- Q1.3 -->
-                <p class="mt-3 mb-1">Have you seen any official plans of where the roads will pass?</p>
-                <input class="form-check-input" type="radio" name="officialPlans" id="plansYes" value="plansYes">
-                <label class="form-check-label" for="plansYes">
-                    Yes
-                </label><br>
-                <input class="form-check-input" type="radio" name="officialPlans" id="plansNo" value="plansNo">
-                <label class="form-check-label" for="plansNo">
-                    No
-                </label><br>
-                <input type="text" class="form-control form-control-sm" id="plansYesSpecify" aria-describedby="plansYesSpecify" placeholder="If yes, where?">
-            </div>
+                <div class="form-group" id="q1-3"><!-- Q1.3 -->
+                    <p class="mt-3 mb-1">Have you seen any official plans of where the roads will pass?</p>
+                    <input class="form-check-input" type="radio" name="officialPlans" id="officialPlansYes" value="officialPlansYes">
+                    <label class="form-check-label" for="officialPlansYes">
+                        Yes
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="officialPlans" id="officialPlansNo" value="officialPlansNo">
+                    <label class="form-check-label" for="officialPlansNo">
+                        No
+                    </label><br>
+                    <input type="text" class="form-control form-control-sm" id="officialPlansYesSpecify" aria-describedby="officialPlansYesSpecify" placeholder="If yes, where?">
+                </div>
 
-            <div class="form-group" id="q2"><!-- Q2 -->
-                <p class="mt-3 mb-1">Has any government official talked with you or your community about the road developments?</p>
-                <input class="form-check-input" type="radio" name="govTalk" id="govYes" value="govYes">
-                <label class="form-check-label" for="govYes">
-                    Yes
-                </label><br>
-                <input class="form-check-input" type="radio" name="govTalk" id="govNo" value="govNo">
-                <label class="form-check-label" for="govNo">
-                    No
-                </label>
-            </div>
+                <div class="form-group" id="q2"><!-- Q2 -->
+                    <p class="mt-3 mb-1">Has any government official talked with you or your community about the road developments?</p>
+                    <input class="form-check-input" type="radio" name="govTalk" id="govTalkYes" value="govTalkYes">
+                    <label class="form-check-label" for="govTalkYes">
+                        Yes
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="govTalk" id="govTalkNo" value="govTalkNo">
+                    <label class="form-check-label" for="govTalkNo">
+                        No
+                    </label>
+                </div>
 
-            <div class="form-group" id="q2.1"><!-- Q2.1 -->
-                <p class="mt-3 mb-1">If yes, when did the government official talk with or communicate with you?</p>
-                <input class="form-check-input" type="radio" name="talkWhen" id="lastWeek" value="lastWeek">
-                <label class="form-check-label" for="lastWeek">
-                    Last week
-                </label><br>
-                <input class="form-check-input" type="radio" name="talkWhen" id="fewWeeks" value="fewWeeks">
-                <label class="form-check-label" for="fewWeeks">
-                    A few weeks ago
-                </label><br>
-                <input class="form-check-input" type="radio" name="talkWhen" id="lastMonth" value="lastMonth">
-                <label class="form-check-label" for="lastMonth">
-                    A month ago
-                </label><br>
-                <input class="form-check-input" type="radio" name="talkWhen" id="fewMonths" value="fewMonths">
-                <label class="form-check-label" for="fewMonths">
-                    A few months ago
-                </label><br>
-                <input class="form-check-input" type="radio" name="talkWhen" id="lastYear" value="lastYear">
-                <label class="form-check-label" for="lastYear">
-                    Last year
-                </label>
-            </div>
+                <div class="form-group" id="q2-1"><!-- Q2.1 -->
+                    <p class="mt-3 mb-1">If yes, when did the government official talk with or communicate with you?</p>
+                    <input class="form-check-input" type="radio" name="talkWhen" id="lastWeek" value="lastWeek">
+                    <label class="form-check-label" for="lastWeek">
+                        Last week
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="talkWhen" id="fewWeeks" value="fewWeeks">
+                    <label class="form-check-label" for="fewWeeks">
+                        A few weeks ago
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="talkWhen" id="lastMonth" value="lastMonth">
+                    <label class="form-check-label" for="lastMonth">
+                        A month ago
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="talkWhen" id="fewMonths" value="fewMonths">
+                    <label class="form-check-label" for="fewMonths">
+                        A few months ago
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="talkWhen" id="lastYear" value="lastYear">
+                    <label class="form-check-label" for="lastYear">
+                        Last year
+                    </label>
+                </div>
 
-            <div class="form-group" id="q2.2"><!-- Q1.2.2 -->
-                <p class="mt-3 mb-1">How did did the government official talk to or communicate with you?</p>
-                <input class="form-check-input" type="checkbox" name="howTalk" id="baraza" value="baraza">
-                <label class="form-check-label" for="baraza">
-                    Baraza
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="howTalk" id="megaphone" value="megaphone">
-                <label class="form-check-label" for="megaphone">
-                    Megaphone
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="howTalk" id="consultation" value="consultation">
-                <label class="form-check-label" for="consultation">
-                    Consultation forum
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="howTalk" id="nyumbaKumi" value="nyumbaKumi">
-                <label class="form-check-label" for="nyumbaKumi">
-                    Through Nyumba Kumi leader
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="howTalk" id="otherLeader" value="otherLeader">
-                <label class="form-check-label" for="otherLeader">
-                    Any other leader
-                </label><br>
-                <input type="text" class="form-control form-control-sm" id="otherLeaderSpecify" aria-describedby="otherLeaderSpecify" placeholder="Please specify">
-            </div>
+                <div class="form-group" id="q2-2"><!-- Q1.2.2 -->
+                    <p class="mt-3 mb-1">How did did the government official talk to or communicate with you?</p>
+                    <input class="form-check-input" type="checkbox" name="howTalk" id="baraza" value="baraza">
+                    <label class="form-check-label" for="baraza">
+                        Baraza
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="howTalk" id="megaphone" value="megaphone">
+                    <label class="form-check-label" for="megaphone">
+                        Megaphone
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="howTalk" id="consultation" value="consultation">
+                    <label class="form-check-label" for="consultation">
+                        Consultation forum
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="howTalk" id="nyumbaKumi" value="nyumbaKumi">
+                    <label class="form-check-label" for="nyumbaKumi">
+                        Through Nyumba Kumi leader
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="howTalk" id="otherLeader" value="otherLeader">
+                    <label class="form-check-label" for="otherLeader">
+                        Any other leader
+                    </label><br>
+                    <input type="text" class="form-control form-control-sm" id="otherLeaderSpecify" aria-describedby="otherLeaderSpecify" placeholder="Please specify">
+                </div>
 
-            <div class="form-group" id="q2.3"><!-- Q2.3 -->
-                <p class="mt-3 mb-1">Have you or people you know been evicted or displaced?</p>
-                <input class="form-check-input" type="radio" name="displaced" id="displacedYes" value="displacedYes">
-                <label class="form-check-label" for="displacedYes">
-                    Yes
-                </label><br>
-                <input class="form-check-input" type="radio" name="displaced" id="displacedNo" value="displacedNo">
-                <label class="form-check-label" for="displacedNo">
-                    No
-                </label>
-            </div>
+                <div class="form-group" id="q2-3"><!-- Q2.3 -->
+                    <p class="mt-3 mb-1">Have you or people you know been evicted or displaced?</p>
+                    <input class="form-check-input" type="radio" name="displaced" id="displacedYes" value="displacedYes">
+                    <label class="form-check-label" for="displacedYes">
+                        Yes
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="displaced" id="displacedNo" value="displacedNo">
+                    <label class="form-check-label" for="displacedNo">
+                        No
+                    </label>
+                </div>
 
-            <div class="form-group" id="q2.4"><!-- Q2.4 -->
-                <p class="mt-3 mb-1">If yes, have you or the people you know received any compensation?</p>
-                <input class="form-check-input" type="radio" name="compensation" id="compensationYes" value="compensationYes">
-                <label class="form-check-label" for="compensationYes">
-                    Yes
-                </label><br>
-                <input class="form-check-input" type="radio" name="compensation" id="compensationNo" value="compensationNo">
-                <label class="form-check-label" for="compensationNo">
-                    No
-                </label>
-            </div>
+                <div class="form-group" id="q2-4"><!-- Q2.4 -->
+                    <p class="mt-3 mb-1">If yes, have you or the people you know received any compensation?</p>
+                    <input class="form-check-input" type="radio" name="compensation" id="compensationYes" value="compensationYes">
+                    <label class="form-check-label" for="compensationYes">
+                        Yes
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="compensation" id="compensationNo" value="compensationNo">
+                    <label class="form-check-label" for="compensationNo">
+                        No
+                    </label>
+                </div>
 
-            <div class="form-group" id="q3"><!-- Q3 -->
-                <p class="mt-3 mb-1">Do you think upgrading Kibera's roads is a good idea?</p>
-                <input class="form-check-input" type="radio" name="roadsGood" id="roadsGoodYes" value="roadsGoodYes">
-                <label class="form-check-label" for="roadsGoodYes">
-                    Yes
-                </label><br>
-                <input class="form-check-input" type="radio" name="roadsGood" id="roadsGoodNo" value="roadsGoodNo">
-                <label class="form-check-label" for="roadsGoodNo">
-                    No
-                </label><br>
-                <input class="form-check-input" type="radio" name="roadsGood" id="roadsGoodNotSure" value="roadsGoodNotSure">
-                <label class="form-check-label" for="roadsGoodNotSure">
-                    Not sure
-                </label>
-            </div>
+                <div class="form-group" id="q3"><!-- Q3 -->
+                    <p class="mt-3 mb-1">Do you think upgrading Kibera's roads is a good idea?</p>
+                    <input class="form-check-input" type="radio" name="roadsGood" id="roadsGoodYes" value="roadsGoodYes">
+                    <label class="form-check-label" for="roadsGoodYes">
+                        Yes
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="roadsGood" id="roadsGoodNo" value="roadsGoodNo">
+                    <label class="form-check-label" for="roadsGoodNo">
+                        No
+                    </label><br>
+                    <input class="form-check-input" type="radio" name="roadsGood" id="roadsGoodNotSure" value="roadsGoodNotSure">
+                    <label class="form-check-label" for="roadsGoodNotSure">
+                        Not sure
+                    </label>
+                </div>
 
-            <div class="form-group" id="q4"><!-- Q4 -->
-                <p class="mt-3 mb-1">What do you think about the NMS road developments?</p>
-                <input class="form-check-input" type="checkbox" name="roadsThink" id="development" value="development">
-                <label class="form-check-label" for="development">
-                    They bring development to my community.
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="roadsThink" id="improveLiving" value="improveLiving">
-                <label class="form-check-label" for="improveLiving">
-                    They will improve our living conditions.
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="roadsThink" id="increaseRent" value="increaseRent">
-                <label class="form-check-label" for="increaseRent">
-                    They will lead to increases in rent.
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="roadsThink" id="leadEviction" value="leadEviction">
-                <label class="form-check-label" for="leadEviction">
-                    They will lead to evictions/displacement
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="roadsThink" id="loseLivelihood" value="loseLivelihood">
-                <label class="form-check-label" for="loseLivelihood">
-                    They will lead to the loss of my livelihood.
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="roadsThink" id="roadsThinkNotSure" value="roadsThinkNotSure">
-                <label class="form-check-label" for="roadsThinkNotSure">
-                    I am not sure.
-                </label><br>
-                <input class="form-check-input" type="checkbox" name="roadsThink" id="otherRoadsThink" value="otherRoadsThink">
-                <label class="form-check-label" for="otherRoadsThink">
-                    Other
-                </label><br>
-                <input type="text" class="form-control form-control-sm" id="otherRoadsThinkSpecify" aria-describedby="otherRoadsThinkSpecify" placeholder="Please specify">
+                <div class="form-group" id="q4"><!-- Q4 -->
+                    <p class="mt-3 mb-1">What do you think about the NMS road developments?</p>
+                    <input class="form-check-input" type="checkbox" name="roadsThink" id="development" value="development">
+                    <label class="form-check-label" for="development">
+                        They bring development to my community.
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="roadsThink" id="improveLiving" value="improveLiving">
+                    <label class="form-check-label" for="improveLiving">
+                        They will improve our living conditions.
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="roadsThink" id="increaseRent" value="increaseRent">
+                    <label class="form-check-label" for="increaseRent">
+                        They will lead to increases in rent.
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="roadsThink" id="leadEviction" value="leadEviction">
+                    <label class="form-check-label" for="leadEviction">
+                        They will lead to evictions/displacement
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="roadsThink" id="loseLivelihood" value="loseLivelihood">
+                    <label class="form-check-label" for="loseLivelihood">
+                        They will lead to the loss of my livelihood.
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="roadsThink" id="roadsThinkNotSure" value="roadsThinkNotSure">
+                    <label class="form-check-label" for="roadsThinkNotSure">
+                        I am not sure.
+                    </label><br>
+                    <input class="form-check-input" type="checkbox" name="roadsThink" id="otherRoadsThink" value="otherRoadsThink">
+                    <label class="form-check-label" for="otherRoadsThink">
+                        Other
+                    </label><br>
+                    <input type="text" class="form-control form-control-sm" id="otherRoadsThinkSpecify" aria-describedby="otherRoadsThinkSpecify" placeholder="Please specify">
+                </div>
+                <button type="button" id="btn-submit" class="btn btn-secondary mt-5" onclick="">Submit</button>
             </div>
-
-            <button type="button" id="btn-submit" class="btn btn-secondary mt-5" onclick="">Submit</button>
 
         </form>
-        <footer class="text-center text-muted">
-            <p class="mt-5 mb-1 fst-italic">&copy; KPSP Information Network</p>
+        <footer class="footer text-center text-muted">
+            <p class="mb-1 fst-italic">&copy; KPSP Information Network</p>
             <p class="fs-smaller"><em>In partnership with Kounkuey Design Initiative</em></p>
         </footer>
     </main>

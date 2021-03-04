@@ -68,7 +68,7 @@ a:hover {
 .close {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 0.5rem;
     height: 1.8rem;
     width: 1.8rem;
     background-color: #fff;
@@ -105,19 +105,47 @@ a:hover {
 }
 .form-blue {
     position: relative;
+    height: calc(100vh - 7rem);
+    overflow: hidden;
     background-color: #EAF3FA;
     border: solid 1px #6c757d;
     padding: 1rem;
+    margin-bottom: 2rem;
+}
+.form-blue .form-questions {
+    height: calc(100% - 8.5rem);
+    overflow: auto;
 }
 .form-survey .form-check-input {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 .form-survey .form-check-label {
     width: calc(100% - 2.5rem);
 }
 .form-survey .form-control-sm {
-    margin-left: 2.25rem;
+    /* margin-left: 2.25rem; */
+    margin-left: 1.25rem;
     width: calc(100% - 2.25rem)
+}
+.form-blue .form-group {
+    height: 100%;
+}
+.form-survey .footer {
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+    max-width: 420px;
+    padding: 0px 30px;
+    left: 50%;
+    transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+}
+
+#q1-1, #q1-2, #q1-3, #q2, #q2-1, #q2-2, #q2-3, #q2-4 {
+    display: none;
 }
 
 @media (min-width: 768px) {
