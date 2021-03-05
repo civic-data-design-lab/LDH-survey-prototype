@@ -8,40 +8,42 @@
     <meta name="generator" content="Hugo 0.80.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>KPSPIN Log In</title>
+    <title>KPSPIN Sign Up</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="./css/signin.css">
+    <link rel="stylesheet" type="text/css" href="../css/signin.css">
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/frontend.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
   
 <body class="text-center">
     <main class="form-signin">
-        <form>
-            <h1 class="h4 mb-0 fw-bold">Welcome to KPSPIN</h1>
+         <form method="post">
+            <h1 class="h4 fw-bold mb-0">Welcome to KPSPIN</h1>
             <p class="text-muted"><em>A community wireless network</em></p>
             <img class="mb-2" src="./img/community.svg" alt="KPSPIN community network" width="50%">
-            <p class="mb-2 fw-bold">Log in to access KPSPIN</p>
+            <p class="mb-2 fw-bold">Sign up to access KPSPIN</p>
+             {% for message in get_flashed_messages() %}
+                <p style="border-color: darkred; background-color: red; color: white">{{ message }}</p>
+            {% endfor %}
             <label for="inputEmail" class="visually-hidden">Email address</label>
-            <input type="email" id="inputEmail" class="form-control fst-italic mt-3 mb-2" placeholder="Email address" required autofocus>
-            <label for="inputPassword" class="visually-hidden">Password</label>
-            <input type="password" id="inputPassword" class="form-control fst-italic mb-1" placeholder="Password" required>
-            <p class="text-right fs-smaller"><em><a class="text-muted" href="#">Forgot password?</a></em></p>
+            <input type="email" name="inputEmail" id="inputEmail" class="form-control fst-italic mb-2" placeholder="Email address" required autofocus>
+            <label for="inputCreatePassword" class="visually-hidden">Password</label>
+            <input type="password" name="inputPassword" id="inputCreatePassword" class="form-control fst-italic" placeholder="Create Password" required>
+            <label for="inputConfirmPassword" class="visually-hidden">Password</label>
+            <input type="password" id="inputConfirmPassword" name="inputConfirmPassword" class="form-control fst-italic mb-2" placeholder="Confirm Password" required>
             <!-- <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
             </div> -->
-            <button class="w-50 mb-1 btn btn-primary fst-bold" type="submit">Log in</button>
-            <p class="mb-4 text-muted fs-smaller"><em>First time user? <a href="./sign-up.html">Sign Up</a></em></p>
+            <button class="w-50 mb-1 btn btn-primary fst-bold" type="submit">Sign Up</button>
+            <p class="mb-4 text-muted fs-smaller"><em>Already have an account? <a href="{{url_for('login')}}">Log in</a></em></p>
             <p class="mb-2 text-muted fs-smaller"><em>By connecting to this Wi-Fi network, you are agreeing to our <a href="#">Terms of Service</a>.</em></p>
             <p class="mb-3 text-muted fst-italic">&copy; KPSP Information Network</p>
-        </form>
+         </form>
     </main>
 
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script>
@@ -61,7 +63,7 @@
   firebase.initializeApp(firebaseConfig);
     </script>
 
-<script src="./js/app.js"></script>
+    <script src="../js/app.js"></script>
 
 
 <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
