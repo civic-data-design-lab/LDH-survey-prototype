@@ -2,3 +2,4 @@ Flask==1.1.2
 requests==2.11.1
 psycopg2-binary==2.8.6
 pyrebase==3.0.27
+gunicorn==20.0.4
