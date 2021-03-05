@@ -34,7 +34,7 @@ webapp = flask.Flask(
     static_url_path="",
     static_folder="static")
 webapp.config["DEBUG"] = True
-
+webapp.secret_key = "kwesiafrifa"
 
 @webapp.route("/", methods=['POST', 'GET'])
 def login():
@@ -229,6 +229,6 @@ def password_reset():
 
 
 if __name__ == "__main__":
-    webapp.secret_key = "kwesiafrifa"
+
 
     webapp.run(debug=True)
