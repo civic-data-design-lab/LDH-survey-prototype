@@ -15,13 +15,11 @@ var linkedQs = [
 ];
 
 function openModal(modalId) {
-    document.getElementById("backdrop").style.display = "block"
     document.getElementById(modalId).style.display = "block"
     document.getElementById(modalId).classList.add("show");
 }
 
 function closeModal(modalId) {
-    document.getElementById("backdrop").style.display = "none"
     document.getElementById(modalId).style.display = "none"
     document.getElementById(modalId).classList.remove("show");
 }
