@@ -34,7 +34,7 @@ webapp = flask.Flask(
     static_url_path="",
     static_folder="static")
 webapp.config["DEBUG"] = True
-webapp.secret_key = "kwesiafrifa"
+webapp.secret_key = "aSdbadkajoajfdcd"
 
 @webapp.route("/", methods=['POST', 'GET'])
 def login():

@@ -16,35 +16,39 @@
     <link rel="stylesheet" type="text/css" href="../css/signin.css">
 
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script type="text/javascript" src="../js/app.js"></script>
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/frontend.js"></script>
 </head>
-  
+
 <body class="text-center">
     <main class="form-signin">
         <!-- <form> -->
             <h1 class="h4 mb-0 fw-bold">Welcome to KPSPIN</h1>
             <p class="mb-4 text-muted"><em>A community wireless network</em></p>
             <p class="mb-4 fw-bold">To access wifi for 10 minutes, please answer a few health questions.</p>
-            <p class="px-3 mb-5 fs-smaller">The health questions generated in partnership with the Ministry of Health and local health initiaves. This will help make improvements to the existing health services and prioritize needs. It should only take a couple of minutes, and your responses are completely anonymous.</p>
-            
-            <button id="btn-answer" class="w-100 mb-5 btn btn-lg btn-secondary fs-smaller" data-toggle="modal" data-target="#modal-voluntary" onclick="openModal('modal-voluntary')">Answer a few questions for <br><strong>10 minutes of complimentary wifi</strong></button>
-        
+            <p class="px-3 mb-5 fs-smaller">The Nairobi Metropolitan Services (NMS) road questions are generated in partnership with the Kounkuey Design Initiative. Your input will help to understand the community's perception on recent road developments in Kibera. It should only take a couple of minutes, and your responses are completely anonymous.</p>
+
+            <button id="btn-answer" class="w-100 btn btn-lg btn-secondary fs-smaller" data-toggle="modal" data-target="#modal-voluntary" onclick="openModal('modal-voluntary')">Answer a few questions for <br><strong>10 minutes of complimentary wifi</strong></button>
+
             <p class="mt-5 mb-1 text-muted fst-italic">&copy; KPSP Information Network</p>
-            <p class="text-muted fs-smaller"><em>in partnership with the Ministry of Health</em></p>
+            <p class="text-muted fs-smaller"><em>In partnership with Kounkuey Design Initiative</em></p>
 
             <!-- Modal -->
             <div class="modal fade" id="modal-voluntary" tabindex="-1" role="dialog" aria-labelledby="voluntaryParticipation" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                        <h5 class="modal-title" id="KPSP">KPSP Information Network</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal('modal-voluntary')">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal('modal-voluntary')">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h5 class="h6 mt-5 text-center" id="KPSP">KPSP Information Network</h5>
                         </div>
                         <div class="modal-body">
-                            <p>Before continuing, please know that your participation is voluntary. You may choose to end the survey at any point by clicking the [X] icon.</p>
+                            <p class=""><em>Before continuing, please know that your participation is voluntary. You may choose to end the survey at any point by clicking the [&times;] icon.</em></p>
+                            <img class="w-50 mb-1" src="./img/continue.svg" alt="User Continue">
                         </div>
                         <div class="modal-footer">
                         <a type="button" id="btn-continue" class="btn btn-secondary" href="{{url_for('question')}}">Continue</a>
@@ -52,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-backdrop fade show" id="backdrop" style="display: none;" onclick="closeModal('modal-voluntary')"></div>
+            <!-- <div class="modal-backdrop fade show" id="backdrop" style="display: none;" onclick="closeModal('modal-voluntary')"></div> -->
         <!-- </form> -->
     </main>
 </body>
