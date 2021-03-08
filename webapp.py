@@ -26,6 +26,7 @@ firebase_config = {
     "appId": "1:116745284882:web:34ce1506c75c0179a957cb"
 }
 
+# Reconfigure to use firebase-admin tools in the future
 firebase = pyrebase.initialize_app(firebase_config)
 auth = firebase.auth()
 
@@ -54,7 +55,7 @@ def login():
             else:
                 try:
                     user = auth.sign_in_with_email_and_password(username, password)
-                    user_id = user['idToken']
+                    user_id = user['localId']
                     session['usr'] = user_id
 
                     cur = DB_CON.cursor()
@@ -108,7 +109,8 @@ def signup():
         else:
             try:
                 user = create_user(username, password)
-                user_id = user['idToken']
+                print(user)
+                user_id = user['localId']
                 session['usr'] = user_id
 
                 cur = DB_CON.cursor()
