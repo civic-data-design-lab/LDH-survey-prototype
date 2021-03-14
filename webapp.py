@@ -41,6 +41,7 @@ webapp.secret_key = "aSdbadkajoajfdcd"
 def login():
     try:
         print(session['usr'])
+
         return redirect(url_for('welcome'))
 
     except KeyError:
@@ -145,6 +146,13 @@ def question():
         return redirect(url_for("thankyou"))
 
     if request.method == "POST":
+        cur.execute(check_already_enterd_sql, query_data)
+        if not cur.fetchone():
+            cur = DB_CON.cursor()
+            sql = '''INSERT INTO profile (uid) VALUES (%s)'''
+            cur.execute(sql, (session['usr'],))
+            DB_CON.commit()
+
         nms_plans = request.form.get("nmsPlans")
         where_roads = request.form.getlist("whereRoads")
         how_plans = request.form.get("howPlans")
