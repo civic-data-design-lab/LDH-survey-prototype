@@ -1,7 +1,7 @@
-# LDH-survey-prototype
+# Living Data Hubs Prototype
 
 Prototype includes:
 - KPSPIN sign up / log in authentication
 - questions on community perception of Nairobi Metropolitan Services (NMS) road developments in Kibera
 
-View [KPSPIN Prototype](https://civic-data-design-lab.github.io/LDH-survey-prototype/index.html) at [http://bit.ly/LDH-prototype](http://bit.ly/LDH-prototype).
+View [KPSPIN Prototype](https://kpspin.herokuapp.com/) at [http://bit.ly/KPSPIN](http://bit.ly/KPSPIN).
