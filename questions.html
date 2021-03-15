@@ -11,20 +11,21 @@
     <title>KPSPIN Questions</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="../css/signin.css">
+    <link rel="stylesheet" type="text/css" href="./css/signin.css">
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
 </head>
   
 <body class="text-left">
     <main class="form-survey">
-        <form action="{{ url_for('question')}}" method="post" class="form-blue" >
+        <form class="form-blue">
             <div class="survey-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="backToWelcome()">
                     <span aria-hidden="true">&times;</span>
@@ -124,7 +125,7 @@
                 </div>
 
                 <div class="form-group" id="q1-3"><!-- Q1.3 -->
-                    <p class="mt-4 mb-1">Have you seen any official plans (maps, meetings, chief) of where the roads will pass?</p>
+                    <p class="mt-4 mb-1">Have you seen any official plans of where the roads will pass?</p>
                     <input class="form-check-input" type="radio" name="officialPlans" id="officialPlansYes" value="officialPlansYes">
                     <label class="form-check-label" for="officialPlansYes">
                         Yes
@@ -137,7 +138,7 @@
                 </div>
 
                 <div class="form-group" id="q2"><!-- Q2 -->
-                    <p class="mt-4 mb-1">Has any government official (chief, DO, MCA, Area MP, Elder) talked with you or your community about the road developments?</p>
+                    <p class="mt-4 mb-1">Has any government official talked with you or your community about the road developments?</p>
                     <input class="form-check-input" type="radio" name="govTalk" id="govTalkYes" value="govTalkYes">
                     <label class="form-check-label" for="govTalkYes">
                         Yes
@@ -173,7 +174,7 @@
                 </div>
 
                 <div class="form-group" id="q2-2"><!-- Q1.2.2 -->
-                    <p class="mt-4 mb-1">How did the government official talk to or communicate with you?</p>
+                    <p class="mt-4 mb-1">How did did the government official talk to or communicate with you?</p>
                     <input class="form-check-input" type="checkbox" name="howTalk" id="baraza" value="baraza">
                     <label class="form-check-label" for="baraza">
                         Baraza
@@ -269,7 +270,7 @@
                     </label><br>
                     <input type="text" class="form-control form-control-sm" id="otherRoadsThinkSpecify" aria-describedby="otherRoadsThinkSpecify" placeholder="Please specify">
                 </div>
-                <button type="submit" id="btn-submit" class="btn btn-secondary mt-5">Submit</button>
+                <button type="button" id="btn-submit" class="btn btn-secondary mt-5" onclick="toThankYou()">Submit</button>
             </div>
 
         </form>
@@ -278,9 +279,5 @@
             <p class="fs-smaller"><em>In partnership with Kounkuey Design Initiative</em></p>
         </footer>
     </main>
-
-    <script src="../js/app.js"></script>
-    <script src="../js/frontend.js"></script>
-
 </body>
 </html>
