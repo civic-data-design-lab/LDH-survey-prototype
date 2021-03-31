@@ -41,7 +41,6 @@ webapp.secret_key = "aSdbadkajoajfdcd"
 def login():
     try:
         print(session['usr'])
-
         return redirect(url_for('welcome'))
 
     except KeyError:
@@ -133,92 +132,6 @@ def signup():
 
 @webapp.route("/questions", methods=["POST", "GET"])
 def question():
-    check_already_enterd_sql = '''SELECT * FROM answer WHERE uid=%(uid)s'''
-    cur = DB_CON.cursor()
-
-    query_data = {
-        'uid': session['usr']
-    }
-
-    cur.execute(check_already_enterd_sql, query_data)
-
-    if cur.fetchone():
-        return redirect(url_for("thankyou"))
-
-    if request.method == "POST":
-        cur.execute(check_already_enterd_sql, query_data)
-        if not cur.fetchone():
-            cur = DB_CON.cursor()
-            sql = '''INSERT INTO profile (uid) VALUES (%s)'''
-            cur.execute(sql, (session['usr'],))
-            DB_CON.commit()
-
-        nms_plans = request.form.get("nmsPlans")
-        where_roads = request.form.getlist("whereRoads")
-        how_plans = request.form.get("howPlans")
-        official_plans = request.form.get("officialPlans")
-        gov_talk = request.form.get("govTalk")
-        talk_when = request.form.get("talkWhen")
-        how_talk = request.form.getlist("howTalk")
-        displaced = request.form.get("displaced")
-        compensation = request.form.get("compensation")
-        roads_good = request.form.get("roadsGood")
-        roads_think = request.form.getlist("roadsThink")
-
-        answers = [nms_plans, where_roads, how_plans, official_plans,
-                   gov_talk, talk_when, how_talk, displaced, compensation,
-                   roads_good, roads_think]
-
-        for i in range(len(answers)):
-            if answers[i]:
-                if isinstance(answers[i], str):
-                    sql = '''INSERT INTO answer (uid, answer_type, answer_text) VALUES (%(uid)s, %(type)s, %(ans)s) RETURNING answer_id'''
-                    cur = DB_CON.cursor()
-
-                    query_data = {
-                        'uid': session['usr'],
-                        'type': 'select_one',
-                        'ans': answers[i]
-                    }
-
-                    cur.execute(sql, query_data)
-                    answer_id = cur.fetchone()[0]
-
-
-                    sql_2 = '''INSERT INTO survey_question_answer VALUES (1, %(num)s, %(answer_id)s) '''
-                    query_data = {
-                        'num': i + 1,
-                        'answer_id': answer_id
-                    }
-                    cur.execute(sql_2, query_data)
-
-                elif isinstance(answers[i], list):
-                    ans = convert_to_csv(answers[i])
-                    sql = '''INSERT INTO answer (uid, answer_type, answer_text) VALUES (%(uid)s, %(type)s, %(ans)s) RETURNING answer_id'''
-                    cur = DB_CON.cursor()
-
-                    query_data = {
-                        'uid': session['usr'],
-                        'type': "select_multiple",
-                        'ans': ans
-                    }
-                    cur.execute(sql, query_data)
-
-                    answer_id = cur.fetchone()[0]
-
-                    sql_2 = '''INSERT INTO survey_question_answer VALUES (1, %(num)s, %(answer_id)s)'''
-                    query_data = {
-                        'num': i + 1,
-                        'answer_id': answer_id
-                    }
-                    cur.execute(sql_2, query_data)
-
-                else:
-                    pass
-                DB_CON.commit()
-
-        return redirect(url_for("thankyou"))
-
     return render_template("questions.html")
 
 
@@ -239,6 +152,4 @@ def password_reset():
 
 
 if __name__ == "__main__":
-
-
     webapp.run(debug=True)
