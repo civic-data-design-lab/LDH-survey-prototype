@@ -11,11 +11,11 @@
     <title>KPSPIN Sign Up</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="../css/signin.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/signin.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
 </head>
   
 <body class="text-center">
@@ -23,7 +23,7 @@
          <form method="post">
             <h1 class="h4 fw-bold mb-0">Welcome to KPSPIN</h1>
             <p class="text-muted"><em>A community wireless network</em></p>
-            <img class="mb-2" src="./img/community.svg" alt="KPSPIN community network" width="50%">
+            <img class="mb-2" src="../static/img/community.svg" alt="KPSPIN community network" width="50%">
             <p class="mb-2 fw-bold">Sign up to access KPSPIN</p>
              {% for message in get_flashed_messages() %}
                 <p style="border-color: darkred; background-color: red; color: white">{{ message }}</p>
@@ -63,7 +63,7 @@
   firebase.initializeApp(firebaseConfig);
     </script>
 
-    <script src="../js/app.js"></script>
+    <script src="{{ url_for('static',filename='js/app.js')}}"></script>
 
 
 <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
